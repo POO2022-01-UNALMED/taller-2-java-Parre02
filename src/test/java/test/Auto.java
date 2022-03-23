@@ -9,13 +9,14 @@ public class Auto {
     int cantidadCreados;
 
     int cantidadaAsientos (){
-        int contadorasientos = 0;
-        for (int index = 0; index < this.asientos.length; index++) {
-            if(this.asientos[index] instanceof Asiento) {
-				contadorasientos +=1;}
-            
-            }
-        return contadorasientos; }//revisar preguntar
+        return this.asientos.length;
+		int contadorAsientos = 0;
+		for(Asiento asiento:asientos) {
+			if(asiento!=null) {
+				contadorAsientos++;
+			}
+		}
+		return contadorAsientos;}//revisar preguntar
 
     String verificarIntegridad ( ) { 
         int iteradorarrayasientos = 0;
